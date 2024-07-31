@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@honey32/next-query-utils": "npm:@jsr/honey32__next-query-utils@^2.0.0-alplha.5",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18"
