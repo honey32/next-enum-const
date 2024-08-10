@@ -1,0 +1,8 @@
+{
+  "editor.formatOnSave": true,
+  "github.copilot.enable": {
+    "*": false,
+    "typescript": true,
+    "typescriptreact": true
+  }
+}
