@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@honey32/next-query-utils": "npm:@jsr/honey32__next-query-utils@^2.0.0-alplha.5",
+    "clsx": "^2.1.1",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18"
