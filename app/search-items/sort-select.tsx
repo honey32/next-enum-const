@@ -39,7 +39,11 @@ const options = [
   sortingOptions.ratingAsc,
 ];
 
-export const SortSelect: FC<{ className?: string }> = ({ className }) => {
+type Props = {
+  className?: string;
+};
+
+export const SortSelect: FC<Props> = ({ className }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
