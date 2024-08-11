@@ -2,31 +2,17 @@
  * @fileoverview クエリパラメータ -> SortingOption およびその逆の変換のためのユーティリティ群
  */
 
-import { ParsedUrlQuery } from "node:querystring";
+import type { ParsedUrlQuery } from "node:querystring";
+import { getSingleQueryParam } from "@honey32/next-query-utils";
+
+import { withDefault } from "@/app/_utils/with-default";
 import {
-  SortingOption,
+  type SortingOption,
   getSortingOption,
   sortingOptions,
 } from "../__models/misc/sorting";
-import { getSingleQueryParam } from "@honey32/next-query-utils";
 
 export const defaultSortingOption = sortingOptions.priceAsc;
-
-/**
- * undefined を返しうる関数をラップして、undefined の代わりに引数で指定したフォールバック値を返す関数を提供する。
- *
- * @param fn undefined を返しうる関数
- * @param fallbackValue fn が undefined を返した場合に代わりに返すためのフォールバック値
- */
-const withDefault = <Fn extends (...args: any) => any>(
-  fn: Fn,
-  fallbackValue: NoInfer<NonNullable<ReturnType<Fn>>>,
-): ((...args: Parameters<Fn>) => NonNullable<ReturnType<Fn>>) => {
-  return (...args: Parameters<Fn>) => {
-    const result = fn(...args);
-    return result ?? fallbackValue;
-  };
-};
 
 /**
  * {@link URLSearchParams} から {@link SortingOption} を取得する。
