@@ -12,6 +12,9 @@ import {
   sortingOptions,
 } from "../__models/misc/sorting";
 
+/**
+ * 選択肢の既定値。
+ */
 export const defaultSortingOption = sortingOptions.priceAsc;
 
 /**
@@ -31,6 +34,17 @@ export const getSortingOption_URLSearchParams = withDefault(
 );
 
 /**
+ * {@link URLSearchParams} を、与えられた {@link SortingOption} で破壊的に更新する
+ */
+export const setSortingOption_URLSearchParams = (
+  it: URLSearchParams,
+  option: Pick<SortingOption, "sort" | "order">,
+): void => {
+  it.set("sort", option.sort);
+  it.set("order", option.order);
+};
+
+/**
  * {@link ParsedUrlQuery} から {@link SortingOption} を取得する
  *
  * 該当するものが無い場合は、{@link defaultSortingOption} を返す。
@@ -45,14 +59,3 @@ export const getSortingOption_ParsedUrlQuery = withDefault(
   },
   defaultSortingOption,
 );
-
-/**
- * {@link URLSearchParams} を、与えられた {@link SortingOption} で破壊的に更新する
- */
-export const setSortingOption_URLSearchParams = (
-  it: URLSearchParams,
-  option: Pick<SortingOption, "sort" | "order">,
-): void => {
-  it.set("sort", option.sort);
-  it.set("order", option.order);
-};
