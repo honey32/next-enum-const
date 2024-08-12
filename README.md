@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ---
 
-このプロジェクトは、Next.js で「選択肢」定数を使用するデモンストレーションです。
+このプロジェクトは、「選択肢」の定義を連想配列形式の定数にまとめるパターンのデモンストレーションです。Next.js を使用しています。
 
 ## ローカルで動作確認する
 
