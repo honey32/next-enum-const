@@ -1,13 +1,13 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { FC, useState, useTransition } from "react";
+import { type FC, useState, useTransition } from "react";
 import clsx from "clsx";
 
-import { toUpdatedSearchParams } from "../_utils/search-params/update";
+import { toUpdatedSearchParams } from "@/app/_utils/search-params/update";
 import {
   getSortingOptionById,
-  SortingOption,
+  type SortingOption,
   sortingOptions,
 } from "./__models/misc/sorting";
 import {

@@ -1,6 +1,6 @@
-import type { ParsedUrlQuery } from "querystring";
+import type { ParsedUrlQuery } from "node:querystring";
 import { type FC, Suspense } from "react";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 import { fetchItems } from "./_fetchers/fetch-items";
 import { getSortingOption_ParsedUrlQuery } from "./_query-params/sorting";

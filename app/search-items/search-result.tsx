@@ -1,7 +1,7 @@
-import { FC, use } from "react";
+import { type FC, use } from "react";
 import clsx from "clsx";
 
-import { Item } from "./__models/item";
+import type { Item } from "./__models/item";
 
 type Props = {
   itemsPromise: Promise<Item[]>;
