@@ -4,5 +4,6 @@
     "*": false,
     "typescript": true,
     "typescriptreact": true
-  }
+  },
+  "biome.enabled": false
 }
